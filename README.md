@@ -1,6 +1,13 @@
 Penelitian ini menggunakan dataset publik InsPLAD, yang dapat diakses pada link berikut:
 <a href="https://github.com/andreluizbvs/InsPLAD"> Official Github Page </a> || Download link: <a href="https://drive.google.com/drive/folders/1psHiRyl7501YolnCcB8k55rTuAUcR9Ak ">Google Drive</a>
 
+Cara menjalankan program untuk melakukan training:
+1. Download Zip file dari Github
+2. install requirements yang terdapat pada requirements.txt
+3. Buka terminal dan buka folder melalui command cd
+4. Jalankan menggunakan command python [nama file.py]
+5. Results dapat dilihat pada terminal dan atau pada folder results.
+
 Judul Penelitian (EN):
 Power Line Component Detection Using YOLOv11 on Nvidia Jetson Nano
 
