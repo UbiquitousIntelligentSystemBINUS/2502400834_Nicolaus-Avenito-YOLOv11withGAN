@@ -5,8 +5,24 @@ Cara menjalankan program untuk melakukan training:
 1. Download Zip file dari Github
 2. install requirements yang terdapat pada requirements.txt
 3. Buka terminal dan buka folder melalui command cd
-4. Jalankan menggunakan command python [nama file.py]
-5. Results dapat dilihat pada terminal dan atau pada folder results.
+
+Jikalau ingin melakukan training dapat dilakukan dengan menggunakan command berikut:
+```python
+python Training\ Files/[yoloversion]custom.py
+```
+Jikalau ingin melakukan evaluasi terhadap model dengan menggunakan model yang sudah di train dapat dilakukan dengan menggunakan command:
+```python
+python Detect\ Files/[yoloversion]detect.py
+```
+Weights dari masing masing model yang telah di train dapat ditemukan pada folder result masing-masing model. (Weights menggunakan file type .pt)
+
+Penelitian ini menggunakan dataset dengan struktur sebagai berikut:
+```
+InsPLAD Detection
+├── annotations # Labels untuk file foto
+├── train #images untuk training (Augmentasi data secara otomatis ditambahkan pada folder ini
+├── val #images untuk validasi (augmentasi data secara otomatis ditambahkan pada folder ini
+```
 
 Judul Penelitian (EN):
 Power Line Component Detection Using YOLOv11 on Nvidia Jetson Nano
