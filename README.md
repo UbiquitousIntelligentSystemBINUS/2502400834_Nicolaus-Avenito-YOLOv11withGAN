@@ -1,10 +1,18 @@
 Penelitian ini menggunakan dataset publik InsPLAD, yang dapat diakses pada link berikut:
 <a href="https://github.com/andreluizbvs/InsPLAD"> Official Github Page </a> || Download link: <a href="https://drive.google.com/drive/folders/1psHiRyl7501YolnCcB8k55rTuAUcR9Ak ">Google Drive</a>
+Untuk menambahkan data sebagai test dataset, digunakan adanya dataset sekunder yang bernama STN-PLAD yang dapat diakses pada link berikut:
+<a href="https://github.com/andreluizbvs/PLAD"> Official Github Page </a>
 
 Cara menjalankan program untuk melakukan training:
 1. Download Zip file dari Github
 2. install requirements yang terdapat pada requirements.txt
 3. Buka terminal dan buka folder melalui command cd
+
+Sebelum melakukan training pada dataset, ubah bentuk annotation dataset dari bentuk COCO menjadi bentuk YOLO, karena menggunakan YOLOv5 keatas. Untuk melakukan perubahan, gunakan command
+```python
+python Training\ Files/changeannotations.py
+```
+maka annotations akan diubah menjadi bentuk YOLO secara otomatis, dan akan memasukkan annotations ke dalam sebuah folder.
 
 Jikalau ingin melakukan training dapat dilakukan dengan menggunakan command berikut:
 ```python
@@ -23,6 +31,21 @@ InsPLAD Detection
 ├── train #images untuk training (Augmentasi data secara otomatis ditambahkan pada folder ini
 ├── val #images untuk validasi (augmentasi data secara otomatis ditambahkan pada folder ini
 ```
+
+Berikut adalah struktur dari File Github ini:
+```
+2502400834_Nicolaus-Avenito-YOLOv11withGAN
+├── Detect Files - Ini adalah file-file python yang dapat digunakan untuk melakukan evaluasi model
+├── Training Files - Ini adalah file-file python yang dapat digunakan untuk melakukan training pada masing-masing model
+├── YOLO AUGMENTED - Ini adalah hasil dari model yang telah di train menggunakan dataset InsPLAD yang telah di augmentasi
+├── YOLOv10n - Results - Ini adalah hasil dari model yang telah di train menggunakan dataset InsPLAD yang belum di augmentasi
+├── YOLOv11n - Results
+├── YOLOv3 tiny - Results
+├── YOLOv5n - Results
+├── README.md
+├── requirements.txt - Ini adalah file requirements yang dapat digunakan untuk meng-install semua plugin yang dibutuhkan untuk melakukan training dan evaluasi pada masing-masing model.
+```
+
 
 Judul Penelitian (EN):
 Power Line Component Detection Using YOLOv11 on Nvidia Jetson Nano
